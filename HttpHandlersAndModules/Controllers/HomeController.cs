@@ -6,6 +6,7 @@ using System.Web.Mvc;
 
 namespace HttpHandlersAndModules.Controllers
 {
+    [HandleError]
     public class HomeController : Controller
     {
         public ActionResult Index()
@@ -22,6 +23,8 @@ namespace HttpHandlersAndModules.Controllers
 
         public ActionResult Contact()
         {
+            //throw exception for demo
+            throw new Exception("This is unhandled exception");
             ViewBag.Message = "Your contact page.";
 
             return View();
