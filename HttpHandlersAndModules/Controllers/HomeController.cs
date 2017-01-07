@@ -1,4 +1,5 @@
-﻿using System;
+﻿using HttpHandlersAndModules.Handlers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Web;
@@ -21,6 +22,7 @@ namespace HttpHandlersAndModules.Controllers
             return View();
         }
 
+        [MyErrorHandler]
         public ActionResult Contact()
         {
             //throw exception for demo
